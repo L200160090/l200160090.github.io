@@ -1,35 +1,28 @@
-body, html {
-  height: 100%;
+div#slideSection, div#update, div#about {
+display: inline-block;
+height: 91vh;
+width: 100%;
 }
 
-a#title-header {
-  font-family: "Arial";
-  font-size: 30px;
+#imageSlide, #update, #about {
+height: 100%;
+vertical-align: top;
 }
 
-div#slide-section{
-  background-color: black;
-  height: 100%;
-  padding-top: 70px;
+#imageSlide{
+  max-width: 100%;
+  height: 91vh;
 }
 
-div#update, div#about{
-  border: 1px solid black;
-  padding-left: 50px;
+#update{
   padding-top: 100px;
-  height: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
 }
 
-img#image-slide {
-  height: 500px;
-  max-width: 500px;
-  max-height: 500px;
-  margin-left: 90px;
-  margin-top: 35px;
+#about {
+  padding: 50px;
 }
 
-.sticky {
-  position: 50;
-  top: 0;
-  width: 100%;
-}
+.centered-and-cropped { object-fit: cover }
