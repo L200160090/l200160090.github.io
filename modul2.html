@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MODUL 2 - INPUT DAN OUTPUT ANALOG</title>
+</head>
+<body>
+    <p><a href="index.html">Back</a></p>
+    <hr>
+    <p><b>Nama : Dimas Fajar Saputro</b></p>
+    <p><b>NIM  : L200160090</b></p>
+    <hr>
+    <p>
+        <b style="font-size:40px">MODUL 2 - INPUT DAN OUTPUT ANALOG</b>
+    </p>
+    <hr>
+    <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat lampu LED menyala blinking sesuai yang ada di modul.</p>
+    <p>
+        Peralatan yang digunakan:<br>
+        1. Arduino Uno Starter Kit<br>
+        2. 5 buah LED<br>
+        3. 5 buah resistor 220 ohm<br>
+        4. Jumper<br>
+        5. Potensiometer<br>
+    </p>
+    <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul.</p>
+    <p>
+        <b>TUGAS I</b><br>
+        Membuat lampu LED sesuai perputaran nilai potensiometer.<br><br>
+		<video controls>
+			<source src="modul2/tugas1.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+		</video>
+    </p>
+	<br>
+	<b>Source Code:</b>
+	<code style = "max-height: 400px; overflow: scroll"><pre>
+
+int sensorPin = A0;
+int ledPin = 13;
+int ledPin1 = 12;
+int ledPin2 = 11;
+int ledPin3 = 10;
+int ledPin4 = 9;
+int sensorValue = 0;
+
+void setup(){
+  pinMode(ledPin, OUTPUT);
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(ledPin4, OUTPUT);
+}
+
+void loop(){
+  sensorValue = analogRead(sensorPin);
+  if(sensorValue >= 0 && sensorValue <= 200){
+    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin1, LOW);
+  }else if(sensorValue >= 201 && sensorValue <= 400){
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin1, HIGH);
+    digitalWrite(ledPin2, LOW);
+  }else if(sensorValue >= 401 && sensorValue <= 600){
+    digitalWrite(ledPin1, LOW);
+    digitalWrite(ledPin2, HIGH);
+    digitalWrite(ledPin3, LOW);      
+  }else if(sensorValue >= 601 && sensorValue <= 800){
+    digitalWrite(ledPin2, LOW);
+    digitalWrite(ledPin3, HIGH);
+    digitalWrite(ledPin4, LOW);
+  }else if(sensorValue > 800){
+    digitalWrite(ledPin3, LOW);
+    digitalWrite(ledPin4, HIGH);
+  }
+}
+  
+
+	</pre></code>
+    <p>
+        <b>TUGAS II</b><br>
+        Membuat modifikasi program untuk mengendalikan kecerahan lampu LED berdasar potensiometer.<br>
+		<br>
+		<video controls>
+                <source src="modul2/tugas2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+		<br>
+		<b>Source Code:</b>
+        <code style = "max-height: 400px; overflow: scroll"><pre>
+
+int ledPin = 9;
+int currentPin = A0;
+int currentFade = 0;
+int maxFade = 1024;
+
+void setup() {
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  currentFade = analogRead(currentPin);
+  if(currentFade <= maxFade){
+      currentFade += 5;
+      analogWrite(ledPin, currentFade / 4);
+      delay(30);
+  }else{
+      currentFade -= 5;
+      analogWrite(ledPin, currentFade / 4);
+      delay(30);
+  }
+}
+
+
+        </pre></code>
+    </p>
+</body>
+</html>
