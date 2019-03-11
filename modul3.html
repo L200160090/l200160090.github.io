@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MODUL 3 - DISPLAY 7-SEGMENT</title>
+</head>
+<body>
+    <p><a href="index.html">Back</a></p>
+    <hr>
+    <p><b>Nama : Dimas Fajar Saputro</b></p>
+    <p><b>NIM  : L200160090</b></p>
+    <hr>
+    <p>
+        <b style="font-size:40px">MODUL 3 - DISPLAY 7-SEGMENT</b>
+    </p>
+    <hr>
+    <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat lampu LED menyala blinking sesuai yang ada di modul.</p>
+    <p>
+        Peralatan yang digunakan:<br>
+        1. Arduino Uno Starter Kit<br>
+        2. 1 buah 7-segment<br>
+        3. 1 buah Lampu Led<br>
+        4. 1 buah Potensiometer<br>
+    </p>
+    <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul.</p>
+    <p>
+        <b>TUGAS</b><br>
+        Membuat 7 segment hidup dari 0-9 sesuai nilai potensiometer yang diputar.<br><br>
+		<video controls>
+			<source src="modul3/tugas1.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+		</video>
+    </p>
+	<br>
+	<b>Source Code:</b>
+	<code style = "max-height: 400px; overflow: scroll"><pre>
+int val[] = {B11000000,B11111001,B10100100,B10110000,B10011001,
+B10010010,B10000010,B11111000,B10000000,B10010000};
+int sensorPin = A0;
+int sensorValue = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  DDRD = B11111111;
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  //for (int i=0; i<10; i++)
+  //{
+  //  PORTD = val[i];
+  //  delay(1000);
+  //}
+  sensorValue = analogRead(sensorPin);
+  if(sensorValue <= 100){
+    PORTD = val[0];  
+  }else if(sensorValue >= 101 && sensorValue <= 200){
+    PORTD = val[1];  
+  }else if(sensorValue >= 201 && sensorValue <= 300){
+    PORTD = val[2];  
+  }else if(sensorValue >= 301 && sensorValue <= 400){
+    PORTD = val[3];  
+  }else if(sensorValue >= 401 && sensorValue <= 500){
+    PORTD = val[4];  
+  }else if(sensorValue >= 501 && sensorValue <= 600){
+    PORTD = val[5];  
+  }else if(sensorValue >= 601 && sensorValue <= 700){
+    PORTD = val[6];  
+  }else if(sensorValue >= 701 && sensorValue <= 800){
+    PORTD = val[7];  
+  }else if(sensorValue >= 801 && sensorValue <= 900){
+    PORTD = val[8];  
+  }else if(sensorValue >= 901 && sensorValue <= 1023){
+    PORTD = val[9];  
+  }
+}
+
+    </pre></code>
+    </p>
+</body>
+</html>
