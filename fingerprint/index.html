@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Biometrics - L200160090</title>
+</head>
+<body>
+    <p><a href="../index.html">Back</a></p>
+    <hr>
+    <p><b>Nama : Dimas Fajar Saputro</b></p>
+    <p><b>NIM  : L200160090</b></p>
+    <h4>TUGAS 2</h4>
+    <hr>
+    <p>Requirement:</p>
+    1. Python 2.7<br>
+    2. PIL library<br>
+    3. Fingerprint Module : <link>https://github.com/L200160090/biometrics</link><br>
+    4. Fingerprint image<br>
+    <p>How to:</p>
+    1. Menyiapkan gambar original berformat png<br>
+    <p><img src="image/z.png" style="width: 200px;height: auto"></p><br>
+    2. Melakukan process poincare untuk mengetahui sudut-sudut jari<br>
+    <code style = "max-height: 400px; overflow: scroll"><pre>
+python poincare.py images/z.png 16 1 --smooth
+    </pre></code>
+    Hasil:<br>
+    <p><img src="image/z_poincare.gif" style="width: 200px;height: auto"></p><br>
+    3. Melakukan process gabor untuk memperjelas jalur jari tangan.<br>
+    <code style = "max-height: 400px; overflow: scroll"><pre>
+python gabor.py images/z.png 16 --save
+    </pre></code>
+    Hasil:<br>
+    <p><img src="image/z_enhanced.gif" style="width: 200px;height: auto"></p><br>
+    4. Melakukan process thining dari gambar gabor sebelumnya untuk mempertipis jalur jari tangan.<br>
+    <code style = "max-height: 400px; overflow: scroll"><pre>
+python thining.py images/z_enhanced.gif --save
+    </pre></code>
+    Hasil:<br>
+    <p><img src="image/z_enhanced_thinned.gif" style="width: 200px;height: auto"></p><br>
+    5. Melakukan process minutae detection dari gambar thining sebelumnya untuk mendeteksi ujung dari jalur jari.<br>
+    <code style = "max-height: 400px; overflow: scroll"><pre>
+python crossing_number.py images/z_enhanced_thinned.gif --save
+    </pre></code>
+    Hasil:<br>
+    <p><img src="image/z_enhanced_thinned_minutiae.gif" style="width: 200px;height: auto"></p><br>
+</body>
+</html>
