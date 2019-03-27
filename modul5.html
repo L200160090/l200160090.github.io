@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MODUL 5 - MOTOR DC</title>
+</head>
+<body>
+    <p><a href="index.html">Back</a></p>
+    <hr>
+    <p><b>Nama : Dimas Fajar Saputro</b></p>
+    <p><b>NIM  : L200160090</b></p>
+    <hr>
+    <p>
+        <b style="font-size:40px">MODUL 5 - MOTOR DC</b>
+    </p>
+    <hr>
+    <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat kecepatan motor bergerak sesuai besaran potensio dan indikator kecepatan motor dengan led.</p>
+    <p>
+        Peralatan yang digunakan:<br>
+        1. Arduino Uno Starter Kit<br>
+        2. 1 Motor DC<br>
+        3. 7 buah Lampu Led<br>
+        4. 7 buah resistor<br>
+        5. Beberapa Jumper<br>
+        6. 1 buah Transistor<br>
+        7. 1 buah dioda
+    </p>
+    <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul dan dikembangkan sesuai kebutuhan.</p>
+	<video controls>
+		<source src="modul5/modul5.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+    </video>
+    <p>Bisa dilihat mulai led ke-3 motor baru hidup dan mati.</p>
+	<br>
+	<b>Source Code:</b>
+	<code style = "max-height: 400px; overflow: scroll"><pre>
+int potPin = A0;
+int motorPin = 13;
+int ledPin = 12;
+int ledPin2 = 11;
+int ledPin3 = 10;
+int ledPin4 = 9;
+int ledPin5 = 8;
+int ledPin6 = 7;
+int ledPin7 = 6;
+int potValue = 0;
+int motorValue = 0;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(ledPin, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+  pinMode(ledPin3, OUTPUT);
+  pinMode(ledPin4, OUTPUT);
+  pinMode(ledPin5, OUTPUT);
+  pinMode(ledPin6, OUTPUT);
+  pinMode(ledPin7, OUTPUT);
+}
+
+void loop() {
+  // Saya map besaran dari 1023 ke 255
+  potValue = analogRead(potPin);
+  motorValue = map(potValue, 0, 1023, 0, 255);
+  if(motorValue >= 0 && motorValue <= 36){
+    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin2, LOW);
+  }else if(motorValue >= 36 && motorValue <= 72){
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin2, HIGH);
+    digitalWrite(ledPin3, LOW);
+  }else if(motorValue >= 72 && motorValue <= 108){
+    digitalWrite(ledPin2, LOW);
+    digitalWrite(ledPin3, HIGH);
+    digitalWrite(ledPin4, LOW);      
+  }else if(motorValue >= 108 && motorValue <= 144){
+    digitalWrite(ledPin3, LOW);
+    digitalWrite(ledPin4, HIGH);
+    digitalWrite(ledPin5, LOW);
+  }else if(motorValue >= 144 && motorValue <= 180){
+    digitalWrite(ledPin4, LOW);
+    digitalWrite(ledPin5, HIGH);
+    digitalWrite(ledPin6, LOW);
+  }else if(motorValue >= 180 && motorValue <= 216){
+    digitalWrite(ledPin5, LOW);
+    digitalWrite(ledPin6, HIGH);
+    digitalWrite(ledPin7, LOW);
+  }else if(motorValue >= 216 && motorValue <= 255){
+    digitalWrite(ledPin6, LOW);
+    digitalWrite(ledPin7, HIGH);
+  }
+  analogWrite(motorPin, motorValue);
+  delay(2);
+}
+    </pre></code>
+    </p>
+</body>
+</html>
