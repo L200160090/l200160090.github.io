@@ -4,118 +4,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MODUL 2 - INPUT DAN OUTPUT ANALOG</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <p><a href="index.html">Back</a></p>
-    <hr>
-    <p><b>Nama : Dimas Fajar Saputro</b></p>
-    <p><b>NIM  : L200160090</b></p>
-    <hr>
-    <p>
-        <b style="font-size:40px">MODUL 2 - INPUT DAN OUTPUT ANALOG</b>
-    </p>
-    <hr>
-    <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat lampu LED menyala blinking sesuai yang ada di modul.</p>
-    <p>
-        Peralatan yang digunakan:<br>
-        1. Arduino Uno Starter Kit<br>
-        2. 5 buah LED<br>
-        3. 5 buah resistor 220 ohm<br>
-        4. Jumper<br>
-        5. Potensiometer<br>
-    </p>
-    <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul.</p>
-    <p>
-        <b>TUGAS I</b><br>
-        Membuat lampu LED sesuai perputaran nilai potensiometer.<br><br>
-		<video controls>
-			<source src="modul2/tugas1.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-		</video>
-    </p>
-	<br>
-	<b>Source Code:</b>
-	<code style = "max-height: 400px; overflow: scroll"><pre>
+    <!-- Navigasi bar -->
+    <div class="navbar sticky-top navbar-brand col-lg-12" style="background-color: blueviolet"><span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:white;font-size: 30px">L200160090 - DIMAS FAJAR SAPUTRO</span></div>
 
-int sensorPin = A0;
-int ledPin = 13;
-int ledPin1 = 12;
-int ledPin2 = 11;
-int ledPin3 = 10;
-int ledPin4 = 9;
-int sensorValue = 0;
-
-void setup(){
-  pinMode(ledPin, OUTPUT);
-  pinMode(ledPin1, OUTPUT);
-  pinMode(ledPin2, OUTPUT);
-  pinMode(ledPin3, OUTPUT);
-  pinMode(ledPin4, OUTPUT);
-}
-
-void loop(){
-  sensorValue = analogRead(sensorPin);
-  if(sensorValue >= 0 && sensorValue <= 200){
-    digitalWrite(ledPin, HIGH);
-    digitalWrite(ledPin1, LOW);
-  }else if(sensorValue >= 201 && sensorValue <= 400){
-    digitalWrite(ledPin, LOW);
-    digitalWrite(ledPin1, HIGH);
-    digitalWrite(ledPin2, LOW);
-  }else if(sensorValue >= 401 && sensorValue <= 600){
-    digitalWrite(ledPin1, LOW);
-    digitalWrite(ledPin2, HIGH);
-    digitalWrite(ledPin3, LOW);      
-  }else if(sensorValue >= 601 && sensorValue <= 800){
-    digitalWrite(ledPin2, LOW);
-    digitalWrite(ledPin3, HIGH);
-    digitalWrite(ledPin4, LOW);
-  }else if(sensorValue > 800){
-    digitalWrite(ledPin3, LOW);
-    digitalWrite(ledPin4, HIGH);
-  }
-}
-  
-
-	</pre></code>
-    <p>
-        <b>TUGAS II</b><br>
-        Membuat modifikasi program untuk mengendalikan kecerahan lampu LED berdasar potensiometer.<br>
-		<br>
-		<video controls>
-                <source src="modul2/tugas2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video>
-		<br>
-		<b>Source Code:</b>
-        <code style = "max-height: 400px; overflow: scroll"><pre>
-
-int ledPin = 9;
-int currentPin = A0;
-int currentFade = 0;
-int maxFade = 1024;
-
-void setup() {
-  // put your setup code here, to run once:
-
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-  currentFade = analogRead(currentPin);
-  if(currentFade <= maxFade){
-      currentFade += 5;
-      analogWrite(ledPin, currentFade / 4);
-      delay(30);
-  }else{
-      currentFade -= 5;
-      analogWrite(ledPin, currentFade / 4);
-      delay(30);
-  }
-}
-
-
-        </pre></code>
-    </p>
+    <!-- Sidebar -->
+    <nav id="sidebar" class="bg-dark wrapper" style="float:left;width:30vh;">
+        <!-- Links -->
+        <ul class="list-unstyled w-100">
+          <li>
+                <a style="color: white" href="index.html">Beranda</a>
+            </li>
+            <li>
+                <a href="#sis" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prak. Sis. Embedded</a>
+                <ul class="collapse list-unstyled" id="sis">
+                    <li>
+                        <a style="color: white" href="modul1.html">Modul 1</a>
+                    </li>
+                    <li>
+                        <a style="color: white" href="modul2.html">Modul 2</a>
+                    </li>
+                    <li>
+                        <a style="color: white" href="modul3.html">Modul 3</a>
+                    </li>
+                    <li>
+                        <a style="color: white" href="modul4.html">Modul 4</a>
+                    </li>
+                    <li>
+                        <a style="color: white" href="modul5.html">Modul 5</a>
+                    </li>
+                </ul>
+            </li>
+            <li style="background:">
+                <a href="#bio" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Biometric</a>
+                <ul class="collapse list-unstyled" id="bio">
+                    <li>
+                        <a style="color: white" href="fingerprint/index.html">Tugas 2</a>
+                    </li>
+            </li>
+        </ul>
+    </nav>
+    <!-- Konten -->
+    <div id="konten" style="float:left;padding-left: 2vh;padding-top: 4vh;overflow-y: scroll;">
+        <h4><a href="index.html">< Back</a></h4>
+        <h4>MODUL 2 - INPUT DAN OUTPUT ANALOG</h4>
+        </p>
+        <hr>
+        <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat lampu LED menyala blinking sesuai yang ada di modul.</p>
+        <p>
+            Peralatan yang digunakan:<br>
+            1. Arduino Uno Starter Kit<br>
+            2. 5 buah LED<br>
+            3. 5 buah resistor 220 ohm<br>
+            4. Jumper<br>
+            5. Potensiometer<br>
+        </p>
+        <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul.</p>
+        <p>
+            <b>TUGAS I</b><br>
+            Membuat lampu LED sesuai perputaran nilai potensiometer.<br><br>
+        <video controls>
+          <source src="modul2/tugas1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+        </p>
+      <br>
+      <b>Source Code:</b>
+      <code style = "max-height: 400px; overflow: scroll"><pre>
+    
+    int sensorPin = A0;
+    int ledPin = 13;
+    int ledPin1 = 12;
+    int ledPin2 = 11;
+    int ledPin3 = 10;
+    int ledPin4 = 9;
+    int sensorValue = 0;
+    
+    void setup(){
+      pinMode(ledPin, OUTPUT);
+      pinMode(ledPin1, OUTPUT);
+      pinMode(ledPin2, OUTPUT);
+      pinMode(ledPin3, OUTPUT);
+      pinMode(ledPin4, OUTPUT);
+    }
+    
+    void loop(){
+      sensorValue = analogRead(sensorPin);
+      if(sensorValue >= 0 && sensorValue <= 200){
+        digitalWrite(ledPin, HIGH);
+        digitalWrite(ledPin1, LOW);
+      }else if(sensorValue >= 201 && sensorValue <= 400){
+        digitalWrite(ledPin, LOW);
+        digitalWrite(ledPin1, HIGH);
+        digitalWrite(ledPin2, LOW);
+      }else if(sensorValue >= 401 && sensorValue <= 600){
+        digitalWrite(ledPin1, LOW);
+        digitalWrite(ledPin2, HIGH);
+        digitalWrite(ledPin3, LOW);      
+      }else if(sensorValue >= 601 && sensorValue <= 800){
+        digitalWrite(ledPin2, LOW);
+        digitalWrite(ledPin3, HIGH);
+        digitalWrite(ledPin4, LOW);
+      }else if(sensorValue > 800){
+        digitalWrite(ledPin3, LOW);
+        digitalWrite(ledPin4, HIGH);
+      }
+    }
+      
+    
+      </pre></code>
+        <p>
+            <b>TUGAS II</b><br>
+            Membuat modifikasi program untuk mengendalikan kecerahan lampu LED berdasar potensiometer.<br>
+        <br>
+        <video controls>
+                    <source src="modul2/tugas2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+        <br>
+        <b>Source Code:</b>
+            <code style = "max-height: 400px; overflow: scroll"><pre>
+    
+    int ledPin = 9;
+    int currentPin = A0;
+    int currentFade = 0;
+    int maxFade = 1024;
+    
+    void setup() {
+      // put your setup code here, to run once:
+    
+    }
+    
+    void loop() {
+      // put your main code here, to run repeatedly:
+      currentFade = analogRead(currentPin);
+      if(currentFade <= maxFade){
+          currentFade += 5;
+          analogWrite(ledPin, currentFade / 4);
+          delay(30);
+      }else{
+          currentFade -= 5;
+          analogWrite(ledPin, currentFade / 4);
+          delay(30);
+      }
+    }
+    
+    
+            </pre></code>
+        </p>
+    </div>
+    
+    <!-- Javascript framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

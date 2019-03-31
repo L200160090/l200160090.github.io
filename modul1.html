@@ -4,147 +4,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MODUL 1 - INPUT DAN OUTPUT DATA DIGITAL</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <p><a href="index.html">Back</a></p>
-    <hr>
-    <p><b>Nama : Dimas Fajar Saputro</b></p>
-    <p><b>NIM  : L200160090</b></p>
-    <hr>
-    <p>
-        <b style="font-size:40px">MODUL 1 - INPUT DAN OUTPUT DATA DIGITAL</b>
-    </p>
-    <hr>
-    <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat lampu LED menyala blinking sesuai yang ada di modul.</p>
-    <p>
-        Peralatan yang digunakan:<br>
-        1. Arduino Uno Starter Kit<br>
-        2. 5 buah LED<br>
-        3. 5 buah resistor 220 ohm<br>
-        4. Jumper<br>
-    </p>
-    <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul.</p>
-    <p>
-        <b>TUGAS I</b><br>
-        Membuat animasi sederhana pada lampu LED.<br><br>
-		<video controls>
-			<source src="tugas1.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-		</video>
-    </p>
-	<br>
-	<b>Source Code:</b>
-	<code style = "max-height: 400px; overflow: scroll"><pre>
-void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode(11, OUTPUT);
-  pinMode(10, OUTPUT);
-  pinMode(9, OUTPUT);
-}
+    <!-- Navigasi bar -->
+    <div class="navbar sticky-top navbar-brand col-lg-12" style="background-color: blueviolet"><span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:white;font-size: 30px">L200160090 - DIMAS FAJAR SAPUTRO</span></div>
 
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(11, HIGH);   
-  delay(300);              
-  digitalWrite(12, HIGH);   
-  digitalWrite(10, HIGH);   
-  delay(300);              
-  digitalWrite(13, HIGH);   
-  digitalWrite(9, HIGH);   
-  delay(300);             
-  digitalWrite(13, LOW);   
-  digitalWrite(12, LOW);   
-  digitalWrite(11, LOW);   
-  digitalWrite(10, LOW);   
-  digitalWrite(9, LOW);    
-  delay(300);
-  digitalWrite(13, HIGH);   
-  digitalWrite(12, HIGH);   
-  digitalWrite(11, HIGH);   
-  digitalWrite(10, HIGH);   
-  digitalWrite(9, HIGH);    
-  delay(300);
-  digitalWrite(13, LOW);   
-  digitalWrite(12, LOW);   
-  digitalWrite(11, LOW);   
-  digitalWrite(10, LOW);   
-  digitalWrite(9, LOW);    
-  delay(300);
-  digitalWrite(13, HIGH);   
-  digitalWrite(12, HIGH);   
-  digitalWrite(11, HIGH);   
-  digitalWrite(10, HIGH);   
-  digitalWrite(9, HIGH);    
-  delay(300);
-  digitalWrite(13, LOW);   
-  digitalWrite(12, LOW);   
-  digitalWrite(11, LOW);   
-  digitalWrite(10, LOW);   
-  digitalWrite(9, LOW);    
-  delay(300);
-  digitalWrite(13, HIGH);   
-  digitalWrite(12, HIGH);   
-  digitalWrite(11, HIGH);   
-  digitalWrite(10, HIGH);   
-  digitalWrite(9, HIGH);    
-  delay(300);
-  digitalWrite(13, LOW);   
-  digitalWrite(12, LOW);   
-  digitalWrite(11, LOW);   
-  digitalWrite(10, LOW);   
-  digitalWrite(9, LOW);    
-  delay(300);
-  
-}
-	</pre></code>
-    <p>
-        <b>TUGAS II</b><br>
-        Membuat modifikasi program agar saat switch tidak ditekan 2 lampu LED mati dan 3 lampu LED nyala, dan berlaku sebaliknya.<br>
-		<br>
-		<table border="1px">
-			<tr>
-				<td><center>Saat Switch tidak ditekan</center></td>
-				<td><center>Saat Switch ditekan</center></td>
-			</tr>
-			<tr>
-				<td><img style="width: 350px;height 350px" src="tugas21.png"></td>
-				<td><img style="width: 380px;height 380px" src="tugas22.png"></td>
-			</tr>
-		</table>
-		<br>
-		<b>Source Code:</b>
-        <code style = "max-height: 400px; overflow: scroll"><pre>
-const int buttonS = 2;
-int buttonState = 0;
-                
-void setup() {
-    pinMode(13, OUTPUT);
-    pinMode(12, OUTPUT);
-    pinMode(11, OUTPUT);
-    pinMode(10, OUTPUT);
-    pinMode(9, OUTPUT);
-    pinMode(buttonS, INPUT);
-}
-                
-void loop() {
-    buttonState = digitalRead(buttonS);
-    if(buttonState == HIGH){
-        digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
-        digitalWrite(12, LOW);    // turn the LED off by making the voltage LOW
-        digitalWrite(11, LOW);    // turn the LED off by making the voltage LOW
-        digitalWrite(10, HIGH);    // turn the LED off by making the voltage LOW
-        digitalWrite(9, HIGH);    // turn the LED off by making the voltage LOW
-    }else{
-        digitalWrite(13, HIGH);    // turn the LED off by making the voltage LOW
-        digitalWrite(12, HIGH);    // turn the LED off by making the voltage LOW
-        digitalWrite(11, HIGH);    // turn the LED off by making the voltage LOW
-        digitalWrite(10, LOW);    // turn the LED off by making the voltage LOW
-        digitalWrite(9, LOW);    // turn the LED off by making the voltage LOW
-    }
-}
-        </pre></code>
-    </p>
+    <!-- Sidebar -->
+    <nav id="sidebar" class="bg-dark wrapper" style="float:left;width:30vh;">
+        <!-- Links -->
+        <ul class="list-unstyled w-100">
+            <li>
+                <a style="color: white" href="index.html">Beranda</a>
+            </li>
+            <li>
+                <a href="#sis" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prak. Sis. Embedded</a>
+                <ul class="collapse list-unstyled" id="sis">
+                    <li>
+                        <a style="color: white" href="modul1.html">Modul 1</a>
+                    </li>
+                    <li>
+                        <a style="color: white" href="modul2.html">Modul 2</a>
+                    </li>
+                    <li>
+                        <a style="color: white" href="modul3.html">Modul 3</a>
+                    </li>
+                    <li>
+                        <a style="color: white" href="modul4.html">Modul 4</a>
+                    </li>
+                    <li>
+                        <a style="color: white" href="modul5.html">Modul 5</a>
+                    </li>
+                </ul>
+            </li>
+            <li style="background:">
+                <a href="#bio" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Biometric</a>
+                <ul class="collapse list-unstyled" id="bio">
+                    <li>
+                        <a style="color: white" href="fingerprint/index.html">Tugas 2</a>
+                    </li>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Konten -->
+    <div id="konten" style="float:left;padding-left: 2vh;padding-top: 4vh;overflow-y: scroll;">
+            <h4><a href="index.html">< Back</a></h4>
+            <h4>MODUL 1 - INPUT DAN OUTPUT DATA DIGITAL</h4><br>
+            <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat lampu LED menyala blinking sesuai yang ada di modul.</p>
+            <p>
+                Peralatan yang digunakan:<br>
+                1. Arduino Uno Starter Kit<br>
+                2. 5 buah LED<br>
+                3. 5 buah resistor 220 ohm<br>
+                4. Jumper<br>
+            </p>
+            <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul.</p>
+            <p>
+                <b>TUGAS I</b><br>
+                Membuat animasi sederhana pada lampu LED.<br><br>
+                <video controls>
+                    <source src="tugas1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+            </p>
+            <br>
+            <b>Source Code:</b>
+            <code style = "max-height: 400px; overflow: scroll"><pre>
+        void setup() {
+          // initialize digital pin LED_BUILTIN as an output.
+          pinMode(13, OUTPUT);
+          pinMode(12, OUTPUT);
+          pinMode(11, OUTPUT);
+          pinMode(10, OUTPUT);
+          pinMode(9, OUTPUT);
+        }
+        
+        // the loop function runs over and over again forever
+        void loop() {
+          digitalWrite(11, HIGH);   
+          delay(300);              
+          digitalWrite(12, HIGH);   
+          digitalWrite(10, HIGH);   
+          delay(300);              
+          digitalWrite(13, HIGH);   
+          digitalWrite(9, HIGH);   
+          delay(300);             
+          digitalWrite(13, LOW);   
+          digitalWrite(12, LOW);   
+          digitalWrite(11, LOW);   
+          digitalWrite(10, LOW);   
+          digitalWrite(9, LOW);    
+          delay(300);
+          digitalWrite(13, HIGH);   
+          digitalWrite(12, HIGH);   
+          digitalWrite(11, HIGH);   
+          digitalWrite(10, HIGH);   
+          digitalWrite(9, HIGH);    
+          delay(300);
+          digitalWrite(13, LOW);   
+          digitalWrite(12, LOW);   
+          digitalWrite(11, LOW);   
+          digitalWrite(10, LOW);   
+          digitalWrite(9, LOW);    
+          delay(300);
+          digitalWrite(13, HIGH);   
+          digitalWrite(12, HIGH);   
+          digitalWrite(11, HIGH);   
+          digitalWrite(10, HIGH);   
+          digitalWrite(9, HIGH);    
+          delay(300);
+          digitalWrite(13, LOW);   
+          digitalWrite(12, LOW);   
+          digitalWrite(11, LOW);   
+          digitalWrite(10, LOW);   
+          digitalWrite(9, LOW);    
+          delay(300);
+          digitalWrite(13, HIGH);   
+          digitalWrite(12, HIGH);   
+          digitalWrite(11, HIGH);   
+          digitalWrite(10, HIGH);   
+          digitalWrite(9, HIGH);    
+          delay(300);
+          digitalWrite(13, LOW);   
+          digitalWrite(12, LOW);   
+          digitalWrite(11, LOW);   
+          digitalWrite(10, LOW);   
+          digitalWrite(9, LOW);    
+          delay(300);
+          
+        }
+            </pre></code>
+            <p>
+                <b>TUGAS II</b><br>
+                Membuat modifikasi program agar saat switch tidak ditekan 2 lampu LED mati dan 3 lampu LED nyala, dan berlaku sebaliknya.<br>
+                <br>
+                <table border="1px">
+                    <tr>
+                        <td><center>Saat Switch tidak ditekan</center></td>
+                        <td><center>Saat Switch ditekan</center></td>
+                    </tr>
+                    <tr>
+                        <td><img style="width: 350px;height: 350px" src="tugas21.png"></td>
+                        <td><img style="width: 380px;height: 350px" src="tugas22.png"></td>
+                    </tr>
+                </table>
+                <br>
+                <b>Source Code:</b>
+                <code style = "max-height: 400px; overflow: scroll"><pre>
+        const int buttonS = 2;
+        int buttonState = 0;
+                        
+        void setup() {
+            pinMode(13, OUTPUT);
+            pinMode(12, OUTPUT);
+            pinMode(11, OUTPUT);
+            pinMode(10, OUTPUT);
+            pinMode(9, OUTPUT);
+            pinMode(buttonS, INPUT);
+        }
+                        
+        void loop() {
+            buttonState = digitalRead(buttonS);
+            if(buttonState == HIGH){
+                digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
+                digitalWrite(12, LOW);    // turn the LED off by making the voltage LOW
+                digitalWrite(11, LOW);    // turn the LED off by making the voltage LOW
+                digitalWrite(10, HIGH);    // turn the LED off by making the voltage LOW
+                digitalWrite(9, HIGH);    // turn the LED off by making the voltage LOW
+            }else{
+                digitalWrite(13, HIGH);    // turn the LED off by making the voltage LOW
+                digitalWrite(12, HIGH);    // turn the LED off by making the voltage LOW
+                digitalWrite(11, HIGH);    // turn the LED off by making the voltage LOW
+                digitalWrite(10, LOW);    // turn the LED off by making the voltage LOW
+                digitalWrite(9, LOW);    // turn the LED off by making the voltage LOW
+            }
+        }
+                </pre></code>
+            </p>
+    </div>
+
+    <!-- Javascript framework -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
