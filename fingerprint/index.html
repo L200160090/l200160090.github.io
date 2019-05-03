@@ -1,29 +1,35 @@
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="../css/main.css">
-        <title>L200160090 - DIMAS FAJAR SAPUTRO PAGE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <title>L200160090 - DIMAS FAJAR SAPUTRO PAGE</title>
 </head>
+
 <body>
     <!-- Navigasi bar -->
-    <div class="navbar sticky-top navbar-brand col-lg-12" style="float:left;background-color: blueviolet"><span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:white;font-size: 30px">L200160090 - DIMAS FAJAR SAPUTRO</span></div>
+    <div class="navbar sticky-top navbar-brand col-lg-12" style="float:left;background-color: blueviolet"><span
+            style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:white;font-size: 30px">L200160090
+            - DIMAS FAJAR SAPUTRO</span></div>
 
     <!-- Sidebar -->
-    <nav id="sidebar" class="bg-dark wrapper" style="float:left;width:30vh;">
+    <nav id="sidebar" class="bg-dark wrapper" style="float:left;width:20v;">
         <!-- Links -->
         <ul class="list-unstyled w-100">
             <li>
                 <a style="color: white" href="../index.html">Beranda</a>
             </li>
             <li>
-                <a href="#sis" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prak. Sis. Embedded</a>
+                <a href="#sis" style="color: white" data-toggle="collapse" aria-expanded="false"
+                    class="dropdown-toggle">Prak. Sis. Embedded</a>
                 <ul class="collapse list-unstyled" id="sis">
                     <li>
                         <a style="color: white" href="../modul1.html">Modul 1</a>
@@ -42,8 +48,9 @@
                     </li>
                 </ul>
             </li>
-            <li style="background:">
-                <a href="#bio" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Biometric</a>
+            <li>
+                <a href="#bio" style="color: white" data-toggle="collapse" aria-expanded="false"
+                    class="dropdown-toggle">Biometric</a>
                 <ul class="collapse list-unstyled" id="bio">
                     <li>
                         <a style="color: white" href="index.html">Tugas 2</a>
@@ -53,35 +60,36 @@
     </nav>
 
     <!-- Konten -->
-    <div id="konten" style="float:left;padding-left: 2vh;padding-top: 4vh;overflow-y: scroll;">
-            <h4><a href="../index.html">< Back</a></h4>
-            <h4>TUGAS 2</h4>
-            <hr>
-            <p>Requirement:</p>
-            1. Python 2.7<br>
-            2. PIL library (pip install pillow)<br>
-            3. Fingerprint Module : <link>https://github.com/L200160090/biometrics</link><br>
-            4. Fingerprint image<br><br>
-            <table class="table table-bordered" style="width:1000px">
-                <tr>
-                    <td>Original</td>
-                    <td>Gabor</td>
-                    <td>Thinning</td>
-                    <td>Minutiae</td>
-                </tr>
-                <tr>
-                    <td><img src="image/d.png" style="width: 220px;height: auto"></td>
-                    <td><img src="image/d_enhanced.gif" style="width: 220px;height: auto"></td>
-                    <td><img src="image/d_enhanced_thinned.gif" style="width: 220px;height: auto"></td>
-                    <td><img src="image/d_enhanced_thinned_minutiae.gif" style="width: 220px;height: auto"></td>
-                </tr>
-                <tr>
-                    <td>Code :</td>
-                    <td>python gabor.py images/d.png 16 --save</td>
-                    <td>python thining.py images/d_enhanced.gif --save</td>
-                    <td>python crossing_number.py images/d_enhanced_thinned.gif --save</td>
-                </tr>
-            </table>
+    <div id="konten" style="float:left;width:1050px;padding-left: 2vh;padding-top: 4vh;overflow-y: scroll;">
+        <h4><a href="../index.html">
+                < Back</a> </h4> <h4>TUGAS 2</h4>
+        <hr>
+        <p>Requirement:</p>
+        1. Python 2.7<br>
+        2. PIL library (pip install pillow)<br>
+        3. Fingerprint Module :
+        <link>https://github.com/L200160090/biometrics</link><br>
+        4. Fingerprint image<br><br>
+        <table class="table table-bordered" style="width:900px">
+            <tr>
+                <td>Original</td>
+                <td>Gabor</td>
+                <td>Thinning</td>
+                <td>Minutiae</td>
+            </tr>
+            <tr>
+                <td><img src="image/d.png" style="width: 220px;height: auto"></td>
+                <td><img src="image/d_enhanced.gif" style="width: 220px;height: auto"></td>
+                <td><img src="image/d_enhanced_thinned.gif" style="width: 220px;height: auto"></td>
+                <td><img src="image/d_enhanced_thinned_minutiae.gif" style="width: 220px;height: auto"></td>
+            </tr>
+            <tr>
+                <td>Code :</td>
+                <td>python gabor.py images/d.png 16 --save</td>
+                <td>python thining.py images/d_enhanced.gif --save</td>
+                <td>python crossing_number.py images/d_enhanced_thinned.gif --save</td>
+            </tr>
+        </table>
     </div>
 
     <!-- Javascript framework -->
@@ -89,4 +97,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
