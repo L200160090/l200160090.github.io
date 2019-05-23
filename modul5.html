@@ -1,92 +1,105 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MODUL 5 - MOTOR DC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MODUL 5 - MOTOR DC</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
   <!-- Navigasi bar -->
-  <div class="navbar sticky-top navbar-brand col-lg-12" style="background-color: blueviolet"><span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:white;font-size: 30px">L200160090 - DIMAS FAJAR SAPUTRO</span></div>
+  <div class="navbar sticky-top navbar-brand col-lg-12" style="background-color: blueviolet"><span
+      style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:white;font-size: 30px">L200160090
+      - DIMAS FAJAR SAPUTRO</span></div>
 
   <!-- Sidebar -->
   <nav id="sidebar" class="bg-dark wrapper" style="float:left;width:30vh;">
-      <!-- Links -->
-      <ul class="list-unstyled w-100">
+    <!-- Links -->
+    <ul class="list-unstyled w-100">
+      <li>
+        <a style="color: white" href="index.html">Beranda</a>
+      </li>
+      <li>
+        <a href="#sis" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prak.
+          Sis. Embedded</a>
+        <ul class="collapse list-unstyled" id="sis">
           <li>
-              <a style="color: white" href="index.html">Beranda</a>
+            <a style="color: white" href="modul1.html">Modul 1</a>
           </li>
           <li>
-              <a href="#sis" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prak. Sis. Embedded</a>
-              <ul class="collapse list-unstyled" id="sis">
-                  <li>
-                      <a style="color: white" href="modul1.html">Modul 1</a>
-                  </li>
-                  <li>
-                      <a style="color: white" href="modul2.html">Modul 2</a>
-                  </li>
-                  <li>
-                      <a style="color: white" href="modul3.html">Modul 3</a>
-                  </li>
-                  <li>
-                      <a style="color: white" href="modul4.html">Modul 4</a>
-                  </li>
-                  <li>
-                      <a style="color: white" href="modul5.html">Modul 5</a>
-                  </li>
-              </ul>
+            <a style="color: white" href="modul2.html">Modul 2</a>
           </li>
           <li>
-            <a href="#bio" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Biometric</a>
-            <ul class="collapse list-unstyled" id="bio">
-                <li>
-                    <a style="color: white" href="fingerprint/index.html">Tugas 2</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#mobile" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Mobile</a>
-            <ul class="collapse list-unstyled" id="mobile">
-                <li>
-                    <a style="color: white" href="mobile/androidlogin.html">Android Login Register</a>
-                </li>
-            </ul>
-        </li>
-      </ul>
+            <a style="color: white" href="modul3.html">Modul 3</a>
+          </li>
+          <li>
+            <a style="color: white" href="modul4.html">Modul 4</a>
+          </li>
+          <li>
+            <a style="color: white" href="modul5.html">Modul 5</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#bio" style="color: white" data-toggle="collapse" aria-expanded="false"
+          class="dropdown-toggle">Biometric</a>
+        <ul class="collapse list-unstyled" id="bio">
+          <li>
+            <a style="color: white" href="fingerprint/index.html">Tugas 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#mobile" style="color: white" data-toggle="collapse" aria-expanded="false"
+          class="dropdown-toggle">Mobile</a>
+        <ul class="collapse list-unstyled" id="mobile">
+          <li>
+            <a style="color: white" href="mobile/androidlogin.html">Android Login Register</a>
+          </li>
+          <li>
+            <a style="color: white" href="mobile/androidvolley.html">Android Volley</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </nav>
 
   <!-- Content -->
   <div id="konten" style="float:left;padding-left: 2vh;padding-top: 4vh;overflow-y: scroll;">
-      <h4><a href="index.html">< Back</a></h4>
-      <h4>MODUL 5 - MOTOR DC</h4>
-      </p>
-      <hr>
-      <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat kecepatan motor bergerak sesuai besaran potensio dan indikator kecepatan motor dengan led.</p>
-      <p>
-          Peralatan yang digunakan:<br>
-          1. Arduino Uno Starter Kit<br>
-          2. 1 Motor DC<br>
-          3. 7 buah Lampu Led<br>
-          4. 7 buah resistor<br>
-          5. Beberapa Jumper<br>
-          6. 1 buah Transistor<br>
-          7. 1 buah dioda
-      </p>
-      <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul dan dikembangkan sesuai kebutuhan.</p>
+    <h4><a href="index.html">
+        < Back</a> </h4> <h4>MODUL 5 - MOTOR DC</h4>
+    </p>
+    <hr>
+    <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat kecepatan motor bergerak sesuai besaran
+      potensio dan indikator kecepatan motor dengan led.</p>
+    <p>
+      Peralatan yang digunakan:<br>
+      1. Arduino Uno Starter Kit<br>
+      2. 1 Motor DC<br>
+      3. 7 buah Lampu Led<br>
+      4. 7 buah resistor<br>
+      5. Beberapa Jumper<br>
+      6. 1 buah Transistor<br>
+      7. 1 buah dioda
+    </p>
+    <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang
+      diajarkan di modul dan dikembangkan sesuai kebutuhan.</p>
     <video controls>
       <source src="modul5/modul5.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-      </video>
-      <p>Bisa dilihat mulai led ke-3 motor baru hidup dan mati.</p>
+      Your browser does not support the video tag.
+    </video>
+    <p>Bisa dilihat mulai led ke-3 motor baru hidup dan mati.</p>
     <br>
     <b>Source Code:</b>
-    <code style = "max-height: 400px; overflow: scroll"><pre>
+    <code style="max-height: 400px; overflow: scroll"><pre>
   int potPin = A0;
   int motorPin = 13;
   int ledPin = 12;
@@ -145,13 +158,14 @@
     delay(2);
   }
       </pre></code>
-      </p>
+    </p>
   </div>
-    
 
-    <!-- Javascript framework -->
+
+  <!-- Javascript framework -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
