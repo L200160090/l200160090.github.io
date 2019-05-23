@@ -1,83 +1,102 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MODUL 2 - INPUT DAN OUTPUT ANALOG</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MODUL 2 - INPUT DAN OUTPUT ANALOG</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <!-- Navigasi bar -->
-    <div class="navbar sticky-top navbar-brand col-lg-12" style="background-color: blueviolet"><span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:white;font-size: 30px">L200160090 - DIMAS FAJAR SAPUTRO</span></div>
 
-    <!-- Sidebar -->
-    <nav id="sidebar" class="bg-dark wrapper" style="float:left;width:30vh;">
-        <!-- Links -->
-        <ul class="list-unstyled w-100">
+<body>
+  <!-- Navigasi bar -->
+  <div class="navbar sticky-top navbar-brand col-lg-12" style="background-color: blueviolet"><span
+      style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:white;font-size: 30px">L200160090
+      - DIMAS FAJAR SAPUTRO</span></div>
+
+  <!-- Sidebar -->
+  <nav id="sidebar" class="bg-dark wrapper" style="float:left;width:30vh;">
+    <!-- Links -->
+    <ul class="list-unstyled w-100">
+      <li>
+        <a style="color: white" href="index.html">Beranda</a>
+      </li>
+      <li>
+        <a href="#sis" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prak.
+          Sis. Embedded</a>
+        <ul class="collapse list-unstyled" id="sis">
           <li>
-                <a style="color: white" href="index.html">Beranda</a>
-            </li>
-            <li>
-                <a href="#sis" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prak. Sis. Embedded</a>
-                <ul class="collapse list-unstyled" id="sis">
-                    <li>
-                        <a style="color: white" href="modul1.html">Modul 1</a>
-                    </li>
-                    <li>
-                        <a style="color: white" href="modul2.html">Modul 2</a>
-                    </li>
-                    <li>
-                        <a style="color: white" href="modul3.html">Modul 3</a>
-                    </li>
-                    <li>
-                        <a style="color: white" href="modul4.html">Modul 4</a>
-                    </li>
-                    <li>
-                        <a style="color: white" href="modul5.html">Modul 5</a>
-                    </li>
-                </ul>
-            </li>
-            <li style="background:">
-                <a href="#bio" style="color: white" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Biometric</a>
-                <ul class="collapse list-unstyled" id="bio">
-                    <li>
-                        <a style="color: white" href="fingerprint/index.html">Tugas 2</a>
-                    </li>
-            </li>
+            <a style="color: white" href="modul1.html">Modul 1</a>
+          </li>
+          <li>
+            <a style="color: white" href="modul2.html">Modul 2</a>
+          </li>
+          <li>
+            <a style="color: white" href="modul3.html">Modul 3</a>
+          </li>
+          <li>
+            <a style="color: white" href="modul4.html">Modul 4</a>
+          </li>
+          <li>
+            <a style="color: white" href="modul5.html">Modul 5</a>
+          </li>
         </ul>
-    </nav>
-    <!-- Konten -->
-    <div id="konten" style="float:left;padding-left: 2vh;padding-top: 4vh;overflow-y: scroll;">
-        <h4><a href="index.html">< Back</a></h4>
-        <h4>MODUL 2 - INPUT DAN OUTPUT ANALOG</h4>
-        </p>
-        <hr>
-        <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat lampu LED menyala blinking sesuai yang ada di modul.</p>
-        <p>
-            Peralatan yang digunakan:<br>
-            1. Arduino Uno Starter Kit<br>
-            2. 5 buah LED<br>
-            3. 5 buah resistor 220 ohm<br>
-            4. Jumper<br>
-            5. Potensiometer<br>
-        </p>
-        <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang diajarkan di modul.</p>
-        <p>
-            <b>TUGAS I</b><br>
-            Membuat lampu LED sesuai perputaran nilai potensiometer.<br><br>
-        <video controls>
-          <source src="modul2/tugas1.mp4" type="video/mp4">
+      </li>
+      <li>
+        <a href="#bio" style="color: white" data-toggle="collapse" aria-expanded="false"
+          class="dropdown-toggle">Biometric</a>
+        <ul class="collapse list-unstyled" id="bio">
+          <li>
+            <a style="color: white" href="fingerprint/index.html">Tugas 2</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#mobile" style="color: white" data-toggle="collapse" aria-expanded="false"
+          class="dropdown-toggle">Mobile</a>
+        <ul class="collapse list-unstyled" id="mobile">
+          <li>
+            <a style="color: white" href="mobile/androidlogin.html">Android Login Register</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- Konten -->
+  <div id="konten" style="float:left;padding-left: 2vh;padding-top: 4vh;overflow-y: scroll;">
+    <h4><a href="index.html">
+        < Back</a> </h4> <h4>MODUL 2 - INPUT DAN OUTPUT ANALOG</h4>
+    </p>
+    <hr>
+    <p>Dalam modul ini, saya dan teman saya melakukan praktik untuk membuat lampu LED menyala blinking sesuai yang ada
+      di modul.</p>
+    <p>
+      Peralatan yang digunakan:<br>
+      1. Arduino Uno Starter Kit<br>
+      2. 5 buah LED<br>
+      3. 5 buah resistor 220 ohm<br>
+      4. Jumper<br>
+      5. Potensiometer<br>
+    </p>
+    <p>Untuk menyelesaikan tugas modul ini, kita pasang dan sesuaikan rangkaian di breadboard menurut dasar yang
+      diajarkan di modul.</p>
+    <p>
+      <b>TUGAS I</b><br>
+      Membuat lampu LED sesuai perputaran nilai potensiometer.<br><br>
+      <video controls>
+        <source src="modul2/tugas1.mp4" type="video/mp4">
         Your browser does not support the video tag.
-        </video>
-        </p>
-      <br>
-      <b>Source Code:</b>
-      <code style = "max-height: 400px; overflow: scroll"><pre>
+      </video>
+    </p>
+    <br>
+    <b>Source Code:</b>
+    <code style="max-height: 400px; overflow: scroll"><pre>
     
     int sensorPin = A0;
     int ledPin = 13;
@@ -120,17 +139,17 @@
       
     
       </pre></code>
-        <p>
-            <b>TUGAS II</b><br>
-            Membuat modifikasi program untuk mengendalikan kecerahan lampu LED berdasar potensiometer.<br>
-        <br>
-        <video controls>
-                    <source src="modul2/tugas2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video>
-        <br>
-        <b>Source Code:</b>
-            <code style = "max-height: 400px; overflow: scroll"><pre>
+    <p>
+      <b>TUGAS II</b><br>
+      Membuat modifikasi program untuk mengendalikan kecerahan lampu LED berdasar potensiometer.<br>
+      <br>
+      <video controls>
+        <source src="modul2/tugas2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <br>
+      <b>Source Code:</b>
+      <code style="max-height: 400px; overflow: scroll"><pre>
     
     int ledPin = 9;
     int currentPin = A0;
@@ -158,12 +177,13 @@
     
     
             </pre></code>
-        </p>
-    </div>
-    
-    <!-- Javascript framework -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </p>
+  </div>
+
+  <!-- Javascript framework -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

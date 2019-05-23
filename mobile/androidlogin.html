@@ -62,7 +62,7 @@
                     class="dropdown-toggle">Mobile</a>
                 <ul class="collapse list-unstyled" id="mobile">
                     <li>
-                        <a style="color: white" href="index.html">Android Login Register</a>
+                        <a style="color: white" href="androidlogin.html">Android Login Register</a>
                     </li>
                 </ul>
             </li>
@@ -78,13 +78,25 @@
         1. Wamp64<br>
         2. Browser<br>
         3. Android Studio<br>
-        4. Koneksi wifi 1 jaringan<br><br>
+        4. Koneksi wifi 1 jaringan antara android dengan pc<br><br>
         Langkah-langkah:<br>
-        1. Pembuatan database seperti di gambar:<br>
+        1. Jalankan program wampp<br>
+        2. Pembuatan database seperti di gambar:<br>
         <img src="img/androidloginregister.JPG" style="width: 848px; height:auto"><br>
-        2. Pembuatan aplikasi di Android sesuai <br>
+        3. Pembuatan aplikasi di Android sesuai <br>
         <link>https://www.androidhive.info/2012/01/android-login-and-registration-with-php-mysql-and-sqlite/</link><br>
-        3. Menjalankan aplikasi<br><br>
+        4. Lihat ip pada komputer dengan membuka cmd dan ketik "ipconfig" seperti pada bawah ini<br>
+        <img src="img/ip.jpg" style="width: 480px; height:auto"><br><br>
+        5. Ubah config pada AppConfig.java dan sesuaikan dengan ip pada komputer<br>
+        <img src="img/config.jpg" style="width: 480px; height:auto"><br><br>
+        6. Klik kiri wamp64 dan klik "Put Online" digunakan untuk meng-allow koneksi dari hp menuju ke server localhost wamp<br>
+        <img src="img/wamp.JPG" style="width: 480px; height:auto"><br><br>
+        7. Edit httpd-vhost<br>
+        <img src="img/httpd.JPG" style="width: 480px; height:auto"><br><br>
+        8. Sesuaikan dengan gambar berikut, lalu pada ip sesuaikan dengan 3 angka ip pertama jaringan yg digunakan contoh : "192.168.1"<br>
+        <img src="img/ip2.JPG" style="width: 480px; height:auto"><br><br>
+        9. Compile aplikasi dan install pada handphone, lalu sambungkan dengan jaringan wifi yg sama dengan komputer.<br>
+        10. Menjalankan aplikasi<br><br>
         Hasil:<br>
         Database:<br>
         <img src="img/login.png" style="width: 848px; height:auto"><br><br>
